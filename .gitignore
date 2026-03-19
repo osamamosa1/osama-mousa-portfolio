@@ -1,12 +1,5 @@
 node_modules/
 dist/
 .vscode/
-.github/
-*.log
-.DS_Store
-node_modules/
-dist/
-.vscode/
-.github/
 *.log
 .DS_Store
