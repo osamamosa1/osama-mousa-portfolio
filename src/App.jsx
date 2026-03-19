@@ -71,142 +71,139 @@ function App() {
   }
 
   const skills = [
-    'Architecture: Clean Architecture, S.O.L.I.D, Design Patterns', 
-    'Logic: Bloc, Cubit, Provider, Reactive Programming',
-    'Tech: Dart, Java, C++, Firebase Core, Google Maps Platform',
-    'DevOps: CI/CD, App Store Connect, Play Console, Research & R&D',
-    'Enterprise: Payment Gateways, Deep Linking, SQLite, Hive, RESTful APIs'
+    { category: 'Architecture', items: 'Clean Architecture, S.O.L.I.D, Design Patterns, Modularization' },
+    { category: 'Logic & State', items: 'BLoC, Cubit, Provider, Reactive Programming (RxDart)' },
+    { category: 'Platform Tech', items: 'Flutter (60fps UI), Google Maps Platform, Firebase Core' },
+    { category: 'DevOps & R&D', items: 'CI/CD Pipelines, App Store / Play Console, Performance Benchmarking' },
+    { category: 'Enterprise Logic', items: 'Payment Pipelines, Deep Linking, Local Persistence (Hive/SQLite)' }
   ]
   const projects = [
     {
       title: "Lend Hands: Home Services Ecosystem",
-      description: "Challenge: Inefficient service dispatching. Solution: Architected a dual-app reactive system with real-time provider tracking. Result: Scaled to 10k+ users with an intuitive custom UI.",
+      description: "**Problem:** Market fragmentation causing late service delivery. **Solution:** Architected a reactive tracking system using Cubit for real-time provider-customer sync. **Impact:** Successfully scaled to 10k+ users with zero state-concurrency errors.",
       technologies: ["Flutter", "Real-time Tracking", "Cubit", "Scalable UI"],
-      features: ["Dynamic Service Management", "Push Notification Pipeline", "Real-time Provider Sync"],
-      status: "Published",
       googlePlay: "https://play.google.com/store/apps/details?id=com.skylimitstech.lendhands.customer",
       appStore: "https://apps.apple.com/us/app/lend-hands/id6739315883",
-      image: lendHandsImage
+      image: lendHandsImage,
+      isFeatured: true
     },
     {
       title: "Lend Hands Expert: Provider App",
       description: "Service provider app to receive and manage service requests with REST APIs, Bloc architecture, and Firebase notifications.",
       technologies: ["Flutter", "REST APIs", "Bloc architecture", "Firebase"],
-      features: ["Booking flow", "Status updates", "Notifications"],
       status: "Published",
       googlePlay: "https://play.google.com/store/apps/details?id=com.skylimitstech.lendhands.expert",
       appStore: "https://apps.apple.com/us/app/lend-hands-expert/id6739271222",
-      image: lendHandsExpertImage
+      image: lendHandsExpertImage,
+      isFeatured: false
     },
     {
       title: "Masakeb: Charity Donation Platform",
-      description: "Challenge: Managing hyper-local donations. Technical Win: Optimized Google Maps marker clustering for 60fps performance and integrated secure multi-provider payments.",
+      description: "**Problem:** Low donor trust due to opaque delivery tracking. **Technical Solution:** Optimized Google Maps marker clustering for smooth navigation and integrated secure multi-provider payments. **Impact:** Enhanced user retention by providing real-time delivery transparency.",
       technologies: ["Google Maps Platform", "Online Payments", "Performance Optimization"],
-      features: ["Live Mosque selection", "Automated Cooling/Water donation", "Real-time Order Lifecycle"],
-      status: "Published",
       googlePlay: "https://play.google.com/store/apps/details?id=com.digitalart.masakeb",
       appStore: "https://apps.apple.com/eg/app/masakib-%D9%85%D8%B3%D8%A7%D9%83%D8%A8/id6478117082?l=ar",
-      image: masakibImage
+      image: masakibImage,
+      isFeatured: true
     },
     {
       title: "Masakeb Captain: Charity Delivery",
       description: "Delivery app for handling charity orders with Google Maps navigation, mosque location, and delivery status updates.",
       technologies: ["Flutter", "Google Maps", "Real-time tracking"],
-      features: ["Google Maps navigation", "Update delivery status for donors"],
       status: "Published",
       googlePlay: "https://play.google.com/store/apps/details?id=com.digitalart.masakeb_captain",
       appStore: "https://apps.apple.com/eg/app/masakib-captain-%D9%85%D8%B3%D8%A7%D9%83%D8%A8-%D9%83%D8%A7%D8%A8%D8%AA%D9%86/id6478289846?l=ar",
-      image: masakibCaptaionImage
+      image: masakibCaptaionImage,
+      isFeatured: false
     },
     {
       title: "A3tn: Heavy Logistics SaaS",
-      description: "Challenge: Complex multi-role equipment rental. Solution: Built a multi-tenant architecture with live pricing engines and secure workflow monitoring.",
+      description: "**Problem:** Manual paperwork for heavy machinery rentals. **Solution:** Built a multi-tenant architecture with live pricing engines and secure workflow monitoring. **Impact:** Digitalized the entire rental cycle for Saudi corporate fleets.",
       technologies: ["SaaS Architecture", "Live Pricing Engines", "Role-Based Access"],
-      features: ["Customer/Driver/Provider Roles", "Fleet monitoring", "Secure Payouts"],
-      status: "Published",
       googlePlay: "https://play.google.com/store/apps/details?id=com.sharaftech.e3tn",
       appStore: "https://apps.apple.com/us/app/a3tn-%D8%A5%D8%B9%D8%AA%D9%86/id6740632715",
-      image: a3tnImage
+      image: a3tnImage,
+      isFeatured: true
     },
     {
       title: "Royat Wattan – Discount Coupons App",
       description: "App for discount coupons with provider/customer modes, package management, and featured discounts.",
       technologies: ["Flutter", "Package management", "Featured discounts"],
-      features: ["Package management", "Discount coupons"],
       status: "Published",
       googlePlay: "https://play.google.com/store/apps/details?id=com.tsh.roya.roya",
       appStore: "https://play.google.com/store/apps/details?id=com.tsh.roya.roya",
-      image: royaaImage
+      image: royaaImage,
+      isFeatured: false
     },
     {
       title: "Fany Plus – Home Services App",
       description: "Home services booking app with provider/customer modes, task management, and real-time dashboards.",
       technologies: ["Flutter", "Task management", "Real-time dashboards"],
-      features: ["Provider/customer modes", "Service booking"],
       status: "Published",
       googlePlay: "https://play.google.com/store/apps/details?id=com.sharafTech.fany_plus",
       appStore: "https://apps.apple.com/us/app/fany-plus-%D9%81%D9%86%D9%8I-%D8%A8%D9%84%D8%B3/id6743993192",
-      image: fanyPlusImage
+      image: fanyPlusImage,
+      isFeatured: false
     },
     {
       title: "Al-Kitab: Holy Quran Application",
       description: "Offline Quran app with 3 recitation styles, 174 reciters, prayer times, Ramadan schedule, tafsir, Hadith, and Quran radio.",
       technologies: ["Flutter", "Offline storage", "Audio streaming"],
-      features: ["3 recitation styles", "174 audio reciters", "Prayer times", "Ramadan schedule", "59 tafsir sources", "Hadith", "Quran radio"],
       status: "Published",
       googlePlay: "https://play.google.com/store/apps/details?id=com.dexef.qetaby&pcampaignid=web_share",
       appStore: "https://apps.apple.com/eg/app/%D8%A7%D9%84%D9%83%D8%AA%D8%A7%D8%A8-%D8%A7%D9%84%D9%82%D8%B1%D8%A2%D9%86-%D8%A7%D9%84%D9%83%D8%B1%D9%8A%D9%85/id1635131408",
-      image: alKitabImage
+      image: alKitabImage,
+      isFeatured: false
     },
     {
       title: "Wathba: Property Management App",
       description: "SaaS platform for property and community management, enabling leasing, service requests, and tenant interaction.",
       technologies: ["Flutter", "Property management", "SaaS solution"],
-      features: ["Lease management", "Service requests", "Tenant portal"],
       status: "Published",
       googlePlay: "https://play.google.com/store/apps/details?id=com.bim.wathba",
       appStore: null,
-      image: wathbahImage
+      image: wathbahImage,
+      isFeatured: false
     },
     {
       title: "Sajil: Car Rental Application",
       description: "Car rental app with payments, real-time availability, and optimized state management for booking.",
       technologies: ["Flutter", "Payment integration", "Real-time availability"],
-      features: ["Optimized state management", "Rental booking"],
       status: "Published",
       googlePlay: "https://play.google.com/store/apps/details?id=amp.sajil_app",
       appStore: "https://apps.apple.com/eg/app/%D8%B3%D8%A7%D8%AC%D9%84/id1566122348?l=ar",
-      image: sajilImage
+      image: sajilImage,
+      isFeatured: false
     },
     {
       title: "Maghsool: Laundry & Ironing Services App",
       description: "Laundry services app with customer, driver, and provider workflows plus Google Maps route tracking.",
       technologies: ["Flutter", "Google Maps API", "Route tracking"],
-      features: ["Customer/driver/provider workflows", "Location tracking"],
       status: "Published",
       googlePlay: "https://play.google.com/store/apps/details?id=com.aait.maghsool",
       appStore: "https://apps.apple.com/eg/app/maghsool-%D9%85%D8%BA%D8%B3%D9%88%D9%84/id6670730000?l=ar",
-      image: maghsoolImage
+      image: maghsoolImage,
+      isFeatured: false
     },
     {
       title: "Wajed: Multi-Vendor Marketplace",
-      description: "Challenge: Orchestrating an entire delivery supply chain. Architecture: Established a shared UI library across 4 internal apps leveraging Bloc for consistent state management.",
-      technologies: ["Shared Component Library", "Supply Chain Logic", "Real-time Tracking"],
-      features: ["Admin Dashboard", "Vendor/Driver/Customer Apps", "Complete Order Lifecycle"],
+      description: "**Architectural Challenge:** Orchestrating a 4-app supply chain. **Strategy:** Established a shared UI design system and unified state management using BLoC. **Impact:** Reduced front-end development time for internal tools by 30%.",
+      technologies: ["Shared Design System", "Unified BLoC Store", "Supply Chain Logic"],
       status: "In Development",
       googlePlay: null,
       appStore: null,
-      image: null
+      image: null,
+      isFeatured: false
     },
     {
       title: "TSH E-Commerce App",
       description: "E-commerce app with categories, browsing, cart, payments, order tracking, and complete shopping cycle.",
       technologies: ["Flutter", "E-commerce", "Payment integration", "Order tracking"],
-      features: ["Product categories", "Add to favorites", "Cart management", "Payment processing", "Order status tracking", "Complete shopping cycle"],
       status: "In Development",
       googlePlay: null,
       appStore: null,
-      image: null
+      image: null,
+      isFeatured: false
     }
   ]
 
@@ -406,19 +403,17 @@ function App() {
                 I transform complex business requirements into high-performance mobile software. Specialist in the Flutter framework, focusing on production-grade architecture that scales from MVP to millions of users.
               </motion.p>
             </motion.div>
-            
-            <motion.div className="flex flex-col sm:flex-row gap-4 justify-center" variants={fadeInUp}>
-              <motion.div {...scaleOnHover}>
-                <Button size="lg" onClick={() => scrollToSection('projects')} className="text-lg px-8 py-3 btn-hover">
-                  View My Work
+                        <motion.div className="flex flex-wrap justify-center gap-4" variants={fadeInUp}>
+                <Button size="lg" className="rounded-full px-8 shadow-lg hover:shadow-xl transition-all" onClick={() => scrollToSection('projects')}>
+                  View Projects
                 </Button>
-              </motion.div>
-              <motion.div {...scaleOnHover}>
-                <Button variant="outline" size="lg" onClick={() => scrollToSection('contact')} className="text-lg px-8 py-3 btn-hover">
+                <Button size="lg" variant="outline" className="rounded-full px-8 backdrop-blur-sm" onClick={() => scrollToSection('contact')}>
                   Get In Touch
                 </Button>
+                <Button size="lg" variant="secondary" className="rounded-full px-8 backdrop-blur-sm border-primary/20" asChild>
+                  <a href="#" download>Download CV</a>
+                </Button>
               </motion.div>
-            </motion.div>
 
             <motion.div className="flex justify-center space-x-6 pt-8" variants={fadeInUp}>
               <motion.a
@@ -478,13 +473,20 @@ function App() {
               <p className="text-lg leading-relaxed">
                 My focus is always on **Performance (60fps UI)**, **Testability (Solid testing layers)**, and **Maintainability (Clean Code & S.O.L.I.D principles)**.
               </p>
-              <motion.div className="flex flex-wrap gap-2" variants={staggerContainer} initial="initial" whileInView="animate" viewport={{ once: true }}>
-                {['🎯 Problem Solver', '🚀 Performance Focused', '📱 Mobile First', '🎨 UI/UX Enthusiast'].map((badge) => (
-                  <motion.div key={badge} variants={fadeInUp} whileHover={{ scale: 1.05 }}>
-                    <Badge variant="secondary" className="text-sm">{badge}</Badge>
-                  </motion.div>
-                ))}
-              </motion.div>
+              <div className="grid md:grid-cols-2 gap-8 mt-12">
+              {skills.map((skillGroup, idx) => (
+                <motion.div 
+                  key={idx}
+                  className="p-6 bg-card border border-border rounded-xl shadow-sm hover:border-primary/50 transition-all"
+                  whileHover={{ y: -5 }}
+                >
+                  <h4 className="text-lg font-bold text-primary mb-2 flex items-center">
+                    <Code className="mr-2 h-5 w-5" /> {skillGroup.category}
+                  </h4>
+                  <p className="text-muted-foreground">{skillGroup.items}</p>
+                </motion.div>
+              ))}
+            </div>
             </motion.div>
 
             <motion.div className="grid grid-cols-2 gap-6" initial="initial" whileInView="animate" viewport={{ once: true }} variants={staggerContainer}>
@@ -523,88 +525,79 @@ function App() {
             </p>
           </motion.div>
 
-          <motion.div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8" variants={staggerContainer} initial="initial" whileInView="animate" viewport={{ once: true }}>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {projects.map((project, index) => (
-              <motion.div key={index} variants={fadeInUp} whileHover={{ scale: 1.03, rotateY: 2 }} transition={{ duration: 0.3 }} className="card-hover">
-                <Card className="group hover:shadow-lg transition-shadow duration-300 h-full">
-                  <CardHeader>
-                    <div className="flex justify-between items-start mb-2">
-                      <CardTitle className="text-xl">{project.title}</CardTitle>
-                      <motion.div whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.95 }}>
-                        <Badge variant={project.status === 'Published' ? 'default' : 'secondary'}>
-                          {project.status}
-                        </Badge>
-                      </motion.div>
+              <motion.div
+                key={project.title}
+                initial="initial"
+                whileInView="animate"
+                viewport={{ once: true }}
+                variants={fadeInUp}
+                transition={{ delay: index * 0.1 }}
+              >
+                <Card className={`h-full flex flex-col overflow-hidden card-hover group cursor-pointer border-border/50 ${project.isFeatured ? 'ring-2 ring-primary/20 shadow-primary/5' : ''}`}>
+                  {project.isFeatured && (
+                    <div className="absolute top-2 right-2 z-10">
+                      <Badge className="bg-primary text-primary-foreground">Featured Case Study</Badge>
                     </div>
-                    <CardDescription className="text-base leading-relaxed">
-                      {project.description}
-                    </CardDescription>
-                  </CardHeader>
-
-                  <CardContent className="space-y-4">
+                  )}
+                  <div className="relative overflow-hidden aspect-video">
                     {project.image ? (
-                      <div className="mb-4">
-
-                        <img src={project.image} alt={`${project.title} screenshot`} className="project-image" />
-                      </div>
+                      <motion.img
+                        src={project.image}
+                        alt={project.title}
+                        className="object-cover w-full h-full transition-transform duration-500 group-hover:scale-110"
+                      />
                     ) : (
-                      <div className="mb-4 project-image flex items-center justify-center">
-                        <div className="text-center text-muted-foreground">
-                          <Smartphone className="h-12 w-12 mx-auto mb-2" />
-                          <p className="text-sm">Coming Soon</p>
-                        </div>
+                      <div className="w-full h-full bg-muted flex items-center justify-center flex-col p-4 text-center">
+                        <Smartphone className="h-12 w-12 text-muted-foreground mb-2" />
+                        <span className="text-sm font-medium">Coming Soon</span>
                       </div>
                     )}
+                  </div>
 
-                    <div>
-                      <h4 className="font-semibold mb-2">Technologies:</h4>
-                      <motion.div className="flex flex-wrap gap-2" variants={staggerContainer}>
-                        {project.technologies.map((tech, i) => (
-                          <motion.div key={i} whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.95 }}>
-                            <Badge variant="outline" className="text-xs">{tech}</Badge>
-                          </motion.div>
-                        ))}
-                      </motion.div>
+                  <CardHeader>
+                    <div className="flex justify-between items-start">
+                      <CardTitle className="text-xl group-hover:text-primary transition-colors">{project.title}</CardTitle>
+                      {project.status === 'In Development' && (
+                        <Badge variant="outline" className="text-amber-500 border-amber-500">
+                          Dev
+                        </Badge>
+                      )}
                     </div>
+                    <div className="text-sm text-muted-foreground mt-2 leading-relaxed" dangerouslySetInnerHTML={{ __html: project.description.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>') }} />
+                  </CardHeader>
 
-                    <div>
-                      <h4 className="font-semibold mb-2">Key Features:</h4>
-                      <ul className="text-sm text-muted-foreground space-y-1">
-                        {project.features.map((feature, i) => (
-                          <motion.li key={i} initial={{ opacity: 0, x: -20 }} whileInView={{ opacity: 1, x: 0 }} transition={{ delay: i * 0.1 }}>
-                            • {feature}
-                          </motion.li>
-                        ))}
-                      </ul>
-                    </div>
-
-                    <div className="flex gap-2 pt-4">
-                      <motion.div className="flex-1" {...scaleOnHover}>
-                        {project.googlePlay && (
-                          <Button variant="outline" size="sm" className="w-full btn-hover" asChild>
-                            <a href={project.googlePlay} target="_blank" rel="noopener noreferrer">
-                              <Play className="h-4 w-4 mr-2" />
-                              Google Play
-                            </a>
-                          </Button>
-                        )}
-                      </motion.div>
-                      <motion.div className="flex-1" {...scaleOnHover}>
-                        {project.appStore && (
-                          <Button variant="outline" size="sm" className="w-full btn-hover" asChild>
-                            <a href={project.appStore} target="_blank" rel="noopener noreferrer">
-                              <Apple className="h-4 w-4 mr-2" />
-                              App Store
-                            </a>
-                          </Button>
-                        )}
-                      </motion.div>
+                  <CardContent className="flex-grow">
+                    <div className="flex flex-wrap gap-1.5 mt-auto">
+                      {project.technologies.map((tech) => (
+                        <Badge key={tech} variant="secondary" className="text-[10px] font-semibold bg-primary/5 text-primary border-primary/10">
+                          {tech}
+                        </Badge>
+                      ))}
                     </div>
                   </CardContent>
+
+                  <CardFooter className="pt-0 flex flex-wrap gap-2">
+                    {project.googlePlay && (
+                      <Button variant="outline" size="sm" asChild className="h-8 px-3 text-xs">
+                        <a href={project.googlePlay} target="_blank" rel="noopener noreferrer">
+                          <Play className="mr-1.5 h-3.5 w-3.5" /> Google Play
+                        </a>
+                      </Button>
+                    )}
+                    {project.appStore && (
+                      <Button variant="outline" size="sm" asChild className="h-8 px-3 text-xs">
+                        <a href={project.appStore} target="_blank" rel="noopener noreferrer">
+                          <Apple className="mr-1.5 h-3.5 w-3.5" /> App Store
+                        </a>
+                      </Button>
+                    )}
+                  </CardFooter>
                 </Card>
               </motion.div>
             ))}
-          </motion.div>
+          </div>
         </div>
       </section>
 
@@ -647,14 +640,16 @@ function App() {
           </motion.div>
 
           <motion.div className="mt-12" initial="initial" whileInView="animate" viewport={{ once: true }} variants={fadeInUp}>
-            <h3 className="text-2xl font-bold text-center mb-8">All Skills</h3>
-            <motion.div className="flex flex-wrap justify-center gap-3" variants={staggerContainer}>
-              {skills.map((skill, i) => (
-                <motion.div key={i} variants={fadeInUp} whileHover={{ scale: 1.1, rotate: Math.random() * 10 - 5 }} whileTap={{ scale: 0.95 }}>
-                  <Badge variant="secondary" className="text-sm px-4 py-2">{skill}</Badge>
-                </motion.div>
+            <h3 className="text-2xl font-bold text-center mb-8">Full Strategic Stack</h3>
+            <div className="flex flex-wrap justify-center gap-3">
+              {skills.map((group, i) => (
+                group.items.split(',').map((item, j) => (
+                  <motion.div key={`${i}-${j}`} variants={fadeInUp} whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.95 }}>
+                    <Badge variant="secondary" className="text-sm px-4 py-2">{item.trim()}</Badge>
+                  </motion.div>
+                ))
               ))}
-            </motion.div>
+            </div>
           </motion.div>
         </div>
       </section>
