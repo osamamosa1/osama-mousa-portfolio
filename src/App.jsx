@@ -70,7 +70,7 @@ function App() {
     setMobileMenuOpen(false)
   }
 
-  const skills = [
+  const strategicSkills = [
     { category: 'Architecture', items: 'Clean Architecture, S.O.L.I.D, Design Patterns, Modularization' },
     { category: 'Logic & State', items: 'BLoC, Cubit, Provider, Reactive Programming (RxDart)' },
     { category: 'Platform Tech', items: 'Flutter (60fps UI), Google Maps Platform, Firebase Core' },
@@ -474,7 +474,7 @@ function App() {
                 My focus is always on **Performance (60fps UI)**, **Testability (Solid testing layers)**, and **Maintainability (Clean Code & S.O.L.I.D principles)**.
               </p>
               <div className="grid md:grid-cols-2 gap-8 mt-12">
-              {skills.map((skillGroup, idx) => (
+              {strategicSkills.map((skillGroup, idx) => (
                 <motion.div 
                   key={idx}
                   className="p-6 bg-card border border-border rounded-xl shadow-sm hover:border-primary/50 transition-all"
@@ -644,13 +644,15 @@ function App() {
           <motion.div className="mt-12" initial="initial" whileInView="animate" viewport={{ once: true }} variants={fadeInUp}>
             <h3 className="text-2xl font-bold text-center mb-8">Full Strategic Stack</h3>
             <div className="flex flex-wrap justify-center gap-3">
-              {skills.flatMap((group, i) => 
-                group.items.split(',').map((item, j) => (
+            <div className="flex flex-wrap justify-center gap-3">
+              {strategicSkills.flatMap((group, i) => 
+                (group.items || '').split(',').map((item, j) => (
                   <motion.div key={`${i}-${j}`} variants={fadeInUp} whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.95 }}>
                     <Badge variant="secondary" className="text-sm px-4 py-2">{item.trim()}</Badge>
                   </motion.div>
                 ))
               )}
+            </div>
             </div>
           </motion.div>
         </div>
