@@ -40,6 +40,7 @@ import royaaImage from './assets/royaa.svg';
 
 function App() {
   const [darkMode, setDarkMode] = useState(true)
+  console.log('--- App Mounting: Senior Portfolio V2 ---')
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
 
   // Contact form state
