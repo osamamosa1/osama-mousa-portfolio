@@ -565,7 +565,9 @@ function App() {
                         </Badge>
                       )}
                     </div>
-                    <div className="text-sm text-muted-foreground mt-2 leading-relaxed" dangerouslySetInnerHTML={{ __html: project.description.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>') }} />
+                    <CardDescription className="text-sm mt-2 leading-relaxed">
+                      {project.description.replace(/\*\*/g, '')}
+                    </CardDescription>
                   </CardHeader>
 
                   <CardContent className="flex-grow">
@@ -642,13 +644,13 @@ function App() {
           <motion.div className="mt-12" initial="initial" whileInView="animate" viewport={{ once: true }} variants={fadeInUp}>
             <h3 className="text-2xl font-bold text-center mb-8">Full Strategic Stack</h3>
             <div className="flex flex-wrap justify-center gap-3">
-              {skills.map((group, i) => (
+              {skills.flatMap((group, i) => 
                 group.items.split(',').map((item, j) => (
                   <motion.div key={`${i}-${j}`} variants={fadeInUp} whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.95 }}>
                     <Badge variant="secondary" className="text-sm px-4 py-2">{item.trim()}</Badge>
                   </motion.div>
                 ))
-              ))}
+              )}
             </div>
           </motion.div>
         </div>
