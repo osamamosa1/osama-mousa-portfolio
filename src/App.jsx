@@ -89,6 +89,16 @@ function App() {
       image: lendHandsImage
     },
     {
+      title: "Lend Hands Expert: Provider App",
+      description: "Service provider app to receive and manage service requests with REST APIs, Bloc architecture, and Firebase notifications.",
+      technologies: ["Flutter", "REST APIs", "Bloc architecture", "Firebase"],
+      features: ["Booking flow", "Status updates", "Notifications"],
+      status: "Published",
+      googlePlay: "https://play.google.com/store/apps/details?id=com.skylimitstech.lendhands.expert",
+      appStore: "https://apps.apple.com/us/app/lend-hands-expert/id6739271222",
+      image: lendHandsExpertImage
+    },
+    {
       title: "Masakeb: Charity Donation Platform",
       description: "Challenge: Managing hyper-local donations. Technical Win: Optimized Google Maps marker clustering for 60fps performance and integrated secure multi-provider payments.",
       technologies: ["Google Maps Platform", "Online Payments", "Performance Optimization"],
@@ -99,6 +109,16 @@ function App() {
       image: masakibImage
     },
     {
+      title: "Masakeb Captain: Charity Delivery",
+      description: "Delivery app for handling charity orders with Google Maps navigation, mosque location, and delivery status updates.",
+      technologies: ["Flutter", "Google Maps", "Real-time tracking"],
+      features: ["Google Maps navigation", "Update delivery status for donors"],
+      status: "Published",
+      googlePlay: "https://play.google.com/store/apps/details?id=com.digitalart.masakeb_captain",
+      appStore: "https://apps.apple.com/eg/app/masakib-captain-%D9%85%D8%B3%D8%A7%D9%83%D8%A8-%D9%83%D8%A7%D8%A8%D8%AA%D9%86/id6478289846?l=ar",
+      image: masakibCaptaionImage
+    },
+    {
       title: "A3tn: Heavy Logistics SaaS",
       description: "Challenge: Complex multi-role equipment rental. Solution: Built a multi-tenant architecture with live pricing engines and secure workflow monitoring.",
       technologies: ["SaaS Architecture", "Live Pricing Engines", "Role-Based Access"],
@@ -106,7 +126,67 @@ function App() {
       status: "Published",
       googlePlay: "https://play.google.com/store/apps/details?id=com.sharaftech.e3tn",
       appStore: "https://apps.apple.com/us/app/a3tn-%D8%A5%D8%B9%D8%AA%D9%86/id6740632715",
-      image: zE
+      image: a3tnImage
+    },
+    {
+      title: "Royat Wattan – Discount Coupons App",
+      description: "App for discount coupons with provider/customer modes, package management, and featured discounts.",
+      technologies: ["Flutter", "Package management", "Featured discounts"],
+      features: ["Package management", "Discount coupons"],
+      status: "Published",
+      googlePlay: "https://play.google.com/store/apps/details?id=com.tsh.roya.roya",
+      appStore: "https://play.google.com/store/apps/details?id=com.tsh.roya.roya",
+      image: royaaImage
+    },
+    {
+      title: "Fany Plus – Home Services App",
+      description: "Home services booking app with provider/customer modes, task management, and real-time dashboards.",
+      technologies: ["Flutter", "Task management", "Real-time dashboards"],
+      features: ["Provider/customer modes", "Service booking"],
+      status: "Published",
+      googlePlay: "https://play.google.com/store/apps/details?id=com.sharafTech.fany_plus",
+      appStore: "https://apps.apple.com/us/app/fany-plus-%D9%81%D9%86%D9%8I-%D8%A8%D9%84%D8%B3/id6743993192",
+      image: fanyPlusImage
+    },
+    {
+      title: "Al-Kitab: Holy Quran Application",
+      description: "Offline Quran app with 3 recitation styles, 174 reciters, prayer times, Ramadan schedule, tafsir, Hadith, and Quran radio.",
+      technologies: ["Flutter", "Offline storage", "Audio streaming"],
+      features: ["3 recitation styles", "174 audio reciters", "Prayer times", "Ramadan schedule", "59 tafsir sources", "Hadith", "Quran radio"],
+      status: "Published",
+      googlePlay: "https://play.google.com/store/apps/details?id=com.dexef.qetaby&pcampaignid=web_share",
+      appStore: "https://apps.apple.com/eg/app/%D8%A7%D9%84%D9%83%D8%AA%D8%A7%D8%A8-%D8%A7%D9%84%D9%82%D8%B1%D8%A2%D9%86-%D8%A7%D9%84%D9%83%D8%B1%D9%8A%D9%85/id1635131408",
+      image: alKitabImage
+    },
+    {
+      title: "Wathba: Property Management App",
+      description: "SaaS platform for property and community management, enabling leasing, service requests, and tenant interaction.",
+      technologies: ["Flutter", "Property management", "SaaS solution"],
+      features: ["Lease management", "Service requests", "Tenant portal"],
+      status: "Published",
+      googlePlay: "https://play.google.com/store/apps/details?id=com.bim.wathba",
+      appStore: null,
+      image: wathbahImage
+    },
+    {
+      title: "Sajil: Car Rental Application",
+      description: "Car rental app with payments, real-time availability, and optimized state management for booking.",
+      technologies: ["Flutter", "Payment integration", "Real-time availability"],
+      features: ["Optimized state management", "Rental booking"],
+      status: "Published",
+      googlePlay: "https://play.google.com/store/apps/details?id=amp.sajil_app",
+      appStore: "https://apps.apple.com/eg/app/%D8%B3%D8%A7%D8%AC%D9%84/id1566122348?l=ar",
+      image: sajilImage
+    },
+    {
+      title: "Maghsool: Laundry & Ironing Services App",
+      description: "Laundry services app with customer, driver, and provider workflows plus Google Maps route tracking.",
+      technologies: ["Flutter", "Google Maps API", "Route tracking"],
+      features: ["Customer/driver/provider workflows", "Location tracking"],
+      status: "Published",
+      googlePlay: "https://play.google.com/store/apps/details?id=com.aait.maghsool",
+      appStore: "https://apps.apple.com/eg/app/maghsool-%D9%85%D8%BA%D8%B3%D9%88%D9%84/id6670730000?l=ar",
+      image: maghsoolImage
     },
     {
       title: "Wajed: Multi-Vendor Marketplace",
