@@ -12,5 +12,5 @@ export default defineConfig({
     },
   },
 
-  base: '/flutter-portfolio/',
+  base: '/osama-mousa-portfolio/',
 })
