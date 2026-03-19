@@ -209,9 +209,9 @@ function App() {
   ]
 
   // Animations
-  const fadeInUp = { initial: { opacity: 0, y: 60 }, animate: { opacity: 1, y: 0 }, transition: { duration: 0.6 } }
-  const fadeInLeft = { initial: { opacity: 0, x: -60 }, animate: { opacity: 1, x: 0 }, transition: { duration: 0.6 } }
-  const fadeInRight = { initial: { opacity: 0, x: 60 }, animate: { opacity: 1, x: 0 }, transition: { duration: 0.6 } }
+  const fadeInUp = { initial: { opacity: 1, y: 0 }, animate: { opacity: 1, y: 0 }, transition: { duration: 0.6 } }
+  const fadeInLeft = { initial: { opacity: 1, x: 0 }, animate: { opacity: 1, x: 0 }, transition: { duration: 0.6 } }
+  const fadeInRight = { initial: { opacity: 1, x: 0 }, animate: { opacity: 1, x: 0 }, transition: { duration: 0.6 } }
   const staggerContainer = { animate: { transition: { staggerChildren: 0.1 } } }
   const scaleOnHover = { whileHover: { scale: 1.05 }, whileTap: { scale: 0.95 } }
 
