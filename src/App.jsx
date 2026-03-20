@@ -1,6 +1,6 @@
 import { Badge } from '@/components/ui/badge.jsx';
 import { Button } from '@/components/ui/button.jsx';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card.jsx';
+import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/card.jsx';
 import { Toaster } from "@/components/ui/sonner";
 import { useToast } from "@/hooks/use-toast";
 import emailjs from '@emailjs/browser';
