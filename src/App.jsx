@@ -37,6 +37,7 @@ import masakibCaptaionImage from './assets/masakib_cap.svg';
 import sajilImage from './assets/sajil.png';
 import wathbahImage from './assets/wathba.svg';
 import royaaImage from './assets/royaa.svg';
+import resumePdf from './assets/resume.pdf';
 
 function App() {
   const [darkMode, setDarkMode] = useState(true)
@@ -412,7 +413,7 @@ function App() {
                   Get In Touch
                 </Button>
                 <Button size="lg" variant="secondary" className="rounded-full px-8 backdrop-blur-sm border-primary/20" asChild>
-                  <a href="#" download>Download CV</a>
+                  <a href={resumePdf} download="file-mous-resume.pdf">Download CV</a>
                 </Button>
               </motion.div>
 
