@@ -377,7 +377,7 @@ function App() {
             <motion.div className="space-y-4" variants={fadeInUp}>
               <motion.h1
                 className="text-4xl md:text-6xl font-bold tracking-tight"
-                initial={{ opacity: 0, scale: 0.5 }}
+                initial={{ opacity: 1, scale: 1 }}
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.8, delay: 0.2 }}
               >
@@ -385,7 +385,7 @@ function App() {
               </motion.h1>
               <motion.h4
                 className="text-2xl md:text-3xl font-bold text-primary mb-2"
-                initial={{ opacity: 0, scale: 0.5 }}
+                initial={{ opacity: 1, scale: 1 }}
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.8, delay: 0.2 }}
               >
@@ -393,7 +393,7 @@ function App() {
               </motion.h4>
               <motion.h5
                 className="text-lg md:text-xl font-medium text-muted-foreground mb-4"
-                initial={{ opacity: 0 }}
+                initial={{ opacity: 1 }}
                 animate={{ opacity: 1 }}
                 transition={{ delay: 0.4 }}
               >
