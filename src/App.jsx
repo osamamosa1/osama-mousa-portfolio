@@ -413,7 +413,7 @@ function App() {
                   Get In Touch
                 </Button>
                 <Button size="lg" variant="secondary" className="rounded-full px-8 backdrop-blur-sm border-primary/20" asChild>
-                  <a href={resumePdf} download="file-mous-resume.pdf">Download CV</a>
+                  <a href={resumePdf} download="Osama Mohamed Resume.pdf">Download CV</a>
                 </Button>
               </motion.div>
 
